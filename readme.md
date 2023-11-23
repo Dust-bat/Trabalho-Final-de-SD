@@ -14,3 +14,5 @@ Deverão ser postados na sala do Google Classroom da disciplina:
 1) Desenho da rede.
 2) Código em Python da rede construída.
 3) Telas com os resultados dos testes realizados.
+
+O código dever executado no mininet.
