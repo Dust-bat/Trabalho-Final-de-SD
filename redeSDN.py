@@ -5,7 +5,7 @@ from mininet.cli import CLI
 from mininet.log import setLogLevel
 
 def create_network():
-    net = Mininet(controller=Controller, switch=OVSSwitch)
+ net = Mininet(controller=Controller, switch=OVSSwitch)
     
 # Adicionar o controlador
 c0 = net.addController('c0')
@@ -64,10 +64,24 @@ h1.cmd('ifconfig h1-eth0 10.0.0.1 netmask 255.255.255.0')
 h2.cmd('ifconfig h2-eth0 10.0.0.2 netmask 255.255.255.0')
 h3.cmd('ifconfig h3-eth0 10.0.0.3 netmask 255.255.255.0')
 h4.cmd('ifconfig h4-eth0 10.0.0.4 netmask 255.255.255.0')
+h5.cmd('ifconfig h5-eth0 10.0.0.5 netmask 255.255.255.0')
+h6.cmd('ifconfig h6-eth0 10.0.0.6 netmask 255.255.255.0')
+h7.cmd('ifconfig h7-eth0 10.0.0.7 netmask 255.255.255.0')
+h8.cmd('ifconfig h8-eth0 10.0.0.8 netmask 255.255.255.0')
+h9.cmd('ifconfig h9-eth0 10.0.0.9 netmask 255.255.255.0')
+h10.cmd('ifconfig h10-eth0 10.0.0.10 netmask 255.255.255.0')
 
 # Definir o controlador para as switches
 s1.cmd('ovs-vsctl set-controller s1 tcp:127.0.0.1:6633')
 s2.cmd('ovs-vsctl set-controller s2 tcp:127.0.0.1:6633')
+s3.cmd('ovs-vsctl set-controller s1 tcp:127.0.0.1:6633')
+s4.cmd('ovs-vsctl set-controller s2 tcp:127.0.0.1:6633')
+s5.cmd('ovs-vsctl set-controller s1 tcp:127.0.0.1:6633')
+s6.cmd('ovs-vsctl set-controller s2 tcp:127.0.0.1:6633')
+s7.cmd('ovs-vsctl set-controller s1 tcp:127.0.0.1:6633')
+s8.cmd('ovs-vsctl set-controller s2 tcp:127.0.0.1:6633')
+s9.cmd('ovs-vsctl set-controller s1 tcp:127.0.0.1:6633')
+s10.cmd('ovs-vsctl set-controller s2 tcp:127.0.0.1:6633')
 
 # Iniciar a interface de linha de comando
 CLI(net)
